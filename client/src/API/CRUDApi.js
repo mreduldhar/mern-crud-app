@@ -8,7 +8,7 @@ export function Create(
   Qty,
   TotalPrice
 ) {
-  let URL = "/api/v1/create-product";
+  let URL = "https://mern-crud-app-omega.vercel.app/api/v1/create-product";
   let PostBody = {
     ProductName: ProductName,
     ProductCode: ProductCode,
@@ -33,7 +33,7 @@ export function Create(
 }
 
 export function Read() {
-  let URL = "/api/v1/read-product";
+  let URL = "https://mern-crud-app-omega.vercel.app/api/v1/read-product";
   return axios
     .get(URL)
     .then((res) => {
@@ -50,7 +50,7 @@ export function Read() {
 }
 
 export function ReadById(id) {
-  let URL = "/api/v1/read-product-by-id/"+id;
+  let URL = "https://mern-crud-app-omega.vercel.app/api/v1/read-product-by-id/"+id;
   return axios
     .get(URL)
     .then((res) => {
@@ -67,7 +67,7 @@ export function ReadById(id) {
 }
 
 export function Update(id, ProductName, ProductCode, Img, UnitPrice, Qty, TotalPrice) {
-  let URL = "/api/v1/update-product/"+id;
+  let URL = "https://mern-crud-app-omega.vercel.app/api/v1/update-product/"+id;
   let PostBody = {
     ProductName: ProductName,
     ProductCode: ProductCode,
@@ -92,7 +92,7 @@ export function Update(id, ProductName, ProductCode, Img, UnitPrice, Qty, TotalP
 }
 
 export function Delete(id) {
-  let URL = "/api/v1/delete-product/" + id;
+  let URL = "https://mern-crud-app-omega.vercel.app/api/v1/delete-product/" + id;
   return axios
     .delete(URL)
     .then((res) => {
